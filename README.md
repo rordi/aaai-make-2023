@@ -13,14 +13,11 @@ This is a prototypical system for evaluation purposes which is part of a researc
 of Applied Sciences and Arts Northwestern Switzerland (FHNW). The prototype includes open publication data
 from MDPI for 2020-2021 (ca. 370K journal articles).
 
-Usage
-you provide the manuscript data (title, abstract, authors)
-the system will find semantically related papers from the literature
-the system will consider authors of semantically related papers as potential reviewers
-you define the papers / potential reviewers to keep in the pool
-the system will resolve the potential conflicts-of-interest for each potential reviewer in the pool (co-authorship, 2nd-level co-authorship, and frequent institute-to-institute collaborations)
-the system will recommend potential reviewers that have the least (or no) conflicts of interest
-To find potential bias-free reviewers for a manuscript, you will need to provide the manuscript data to the system:
+## Solution Documentation
 
-Title and/or abstract [required, will not be saved]
-E-mail addresses of the manuscript co-authors [required, will not be saved]
+The system is composed of several components:
+
+- **Vector Search Engine:** is an index of document embeddings created with Allen AI SPECTER of past scholarly publications. The component supports approximate nearest neighbours (ANN) search through the implementation of the Hierarchical Navigable Small World (HNSW) algorithm.
+- **Graph Database:** graph representation of past publications, including the co-authorship network and institutional affiliations. The component supports the resolution of conflicts-of-interest between potential reviewers and authors (direct co-authorship, second-level co-authorship, and institute-to-institute collaborations).
+- **Backend Application:** backend application in Python offering API endpoints to access business logics, to compute document embeddings with SPECTER, and to access data from the other layers (graph database, vector search).
+- **Frontend Application:** frontend with graphical user interface for journal editors to use.
