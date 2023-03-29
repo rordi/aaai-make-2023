@@ -3,6 +3,9 @@
 Paper and slides from the AAAI-MAKE 2023 contribution on applying machine learning and knowledge graphs
 in the domain of the Reviewer Assignment Problem (RAP).
 
+- Slides: https://github.com/rordi/aaai-make-2023/blob/main/slides.pdf
+- Preprint: https://github.com/rordi/aaai-make-2023/blob/main/paper.pdf
+
 ## Find Bias-Free Reviewers
 
 The Reviewers App allows you to find potential, bias-free referees for your journal manuscripts using
