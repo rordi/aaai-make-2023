@@ -1,4 +1,6 @@
-# AAAI-MAKE 2023
+# A Hybrid Intelligent Approach Combining Machine Learning and a Knowledge Graph to Support Academic Journal Publishers Addressing the Reviewer Assignment Problem (RAP)
+
+## AAAI-MAKE 2023
 
 Paper and slides from the AAAI-MAKE 2023 contribution on applying machine learning and knowledge graphs
 in the domain of the Reviewer Assignment Problem (RAP).
